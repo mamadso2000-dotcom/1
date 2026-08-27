@@ -1,0 +1,53 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title and icon -->
+    <title>Night Sky Observatory</title>
+    <link href="{% static 'assets/img/ICON1.png' %}" rel="icon">
+    
+
+    <!-- css file -->
+    <link href="{% static 'assets/css/Main.css' %}" type="text/css" rel="stylesheet"/>
+
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <a href="{% url 'home' %}" class="nav-header"><b>Night Sky Observatory</b></a>
+        <pre>   </pre>
+        <span>
+          {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post" class="logout-form">
+              {% csrf_token %}
+              <button type="submit" class="logout-btn">Logout</button>
+            </form>
+          {% else %}
+            <a class="a" href="{% url 'login' %}">Login</a><pre>  </pre>
+            <a class="a" href="{% url 'sighnup' %}">Sighnup</a>
+          {% endif %}
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}
+      {% endblock content %}
+    </main>
+
+    <footer></footer>
+
+    <!-- js file -->
+    <script src="{% static 'assets/js/main.js' %}" crossorigin="anonymous"></script>
+  </body>
+
+</html>

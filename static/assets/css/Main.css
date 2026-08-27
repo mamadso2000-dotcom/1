@@ -1,0 +1,154 @@
+/* tag styls */
+a{
+    text-decoration: none;
+    color: inherit
+}
+
+body{
+    background-color: rgb(24, 2, 59);
+    margin: 0;
+    margin-top: 50px;
+    color: antiquewhite;
+}
+
+nav{
+    background-color: rgb(24, 2, 59);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: antiquewhite;
+}
+
+pre{
+    display: inline;
+}
+
+/* id styls */
+
+
+/* class styls */
+.a{
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+.bold-paragraph{
+    font-size: 1.5rem;
+}
+
+.container{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.home-div{
+    width: 100%;
+    height: 400px;
+
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+
+    clip-path: ellipse(100% 90% at 50% 0%);
+    text-align: center;
+    color: rgb(24, 2, 59);
+}
+
+.home-h1{
+    font-size: 3.5rem;
+}
+
+.home-item-1{
+    width: 24%;
+    height: 200px;
+
+    margin-right: 1%;
+    margin-left: 1%;
+
+    background-image: url(img/plans.png);
+    background-size: 100%;
+
+    color: antiquewhite;
+    border-radius: 15px;
+}
+
+.home-item-2{
+    width: 24%;
+    height: 200px;
+
+    margin-right: 1%;
+    margin-left: 1%;
+
+    background-image: url(img/gallery.png);
+    background-size: 100%;
+
+    color: antiquewhite;
+    border-radius: 15px;
+}
+
+.home-item-3{
+    width: 24%;
+    height: 200px;
+
+    margin-right: 1%;
+    margin-left: 1%;
+
+    background-image: url(img/calender.png);
+    background-size: 100%;
+
+    color: antiquewhite;
+    border-radius: 15px;
+}
+
+.home-item-4{
+    width: 24%;
+    height: 200px;
+
+    margin-right: 1%;
+    margin-left: 1%;
+
+    background-image: url(img/about.png);
+    background-size: 100%;
+
+    color: antiquewhite;
+    border-radius: 15px;
+}
+
+.home-ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.inlining{
+    display: inline;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: antiquewhite;
+}
+
+
+.logout-form{
+    display: inline;
+    font-size: 1.5rem;
+}
+
+
+.nav-header{
+    color: inherit;
+    font-size: 2rem;
+}

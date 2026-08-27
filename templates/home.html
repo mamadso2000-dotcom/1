@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Observatory document -->
+    <div class="home-div">
+        <h1 class="home-h1">Night Sky Observatory</h1>
+        <p class="bold-paragraph">Don't just gaze at the night sky; discover it.<br>At the Night Sky Observatory, gaze at the moon, planets, stars, and wonders of the deep with professional telescopes.<br>Look at the cosmos and enjoy a unique astronomical experience.</p>
+        <b class="bold-paragraph"><a href="{% url 'about' %}">Read more</a></b>
+    </div>
+
+    <!-- main objects -->
+    <ul class="home-ul">
+        <div class="home-item-1" style="max-width: 20rem;">
+            <h1 class="inlining"><a href="{% url 'plans' %}">Observation plans</a></h1>
+            <pre style="font-size: 0.9rem;"> <br><br>  🌕Moon🌕<br><br>  🪐Planets🪐<br><br>  ✨Deep-sky objects✨<br><br>  ☄️Meteor showers☄️</pre>
+        </div>
+
+        <div class="home-item-2" style="max-width: 20rem;">
+            <h1 class="inlining"><a href="{% url 'gallery' %}">Gallery</a></h1>
+            <pre style="font-size: 0.9rem;"> <br><br>  🌌Sky images🌌<br><br>  🔭Telescopes images🔭<br><br>  🛰️Observatories images🛰️</pre>
+        </div>
+
+        <div class="home-item-3" style="max-width: 20rem;">
+            <h1 class="inlining"><a href="{% url 'calender' %}">Astronomical calendar</a></h1>
+            <pre style="font-size: 0.9rem;"> <br>  ☄️Astronomical Events☄️<br><br>  🌕Astronomical News🌕<br><br>  🚀Our Projects News🚀<br><br></pre>
+        </div>
+
+        <div class="home-item-4" style="max-width: 20rem;">
+            <h1 class="inlining"><a href="{% url 'about' %}">About us</a></h1>
+            <pre style="font-size: 0.9rem;"> <br><br>  💬Contact Us💬<br><br>  📡Our Observatories📡<br><br>  🔭Our Equipment🔭<br><br>  🎯Objectives & Activities🎯</pre>
+        </div>
+
+    </ul>
+{% endblock content %}
