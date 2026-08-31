@@ -45,10 +45,8 @@ INSTALLED_APPS = [
     # local
     'home',
     'about',
-    'calender',
-    'gallery',
-    'plans',
     'accounts',
+    'astronomy',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'
@@ -141,6 +139,9 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

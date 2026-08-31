@@ -2,4 +2,26 @@
 
 {% block content %}
 
+    <hr>
+
+    <div class="container">
+        <ul class="inline-ul">
+
+            {% for planet in planet_list %}
+
+                <div class="planet-item">
+
+                    <a href="{% url 'planet_detail' planet.pk %}">
+                        <img src="{{ planet.image.url }}" class="planet-image" alt="{{ planet.name }}_image">
+
+                        <h2>{{ planet.name }}</h2>
+                    </a>
+
+                </div>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+
 {% endblock content %}

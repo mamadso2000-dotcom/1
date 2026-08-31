@@ -10,26 +10,28 @@
     </div>
 
     <!-- main objects -->
-    <ul class="home-ul">
-        <div class="home-item-1" style="max-width: 20rem;">
-            <h1 class="inlining"><a href="{% url 'plans' %}">Observation plans</a></h1>
-            <pre style="font-size: 0.9rem;"> <br><br>  🌕Moon🌕<br><br>  🪐Planets🪐<br><br>  ✨Deep-sky objects✨<br><br>  ☄️Meteor showers☄️</pre>
-        </div>
+    <div class="home-items">
+        <ul class="inline-ul">
+            <div class="home-item" id="plans-backgraund" style="max-width: 20rem;">
+                <h1 class="inlining"><a href="{% url 'plans' %}">Observation plans</a></h1>
+                <pre style="font-size: 0.9rem;"> <br><br>  🌕Moon🌕<br><br>  🪐Planets🪐<br><br>  ✨Deep-sky objects✨<br><br>  ☄️Meteor showers☄️</pre>
+            </div>
 
-        <div class="home-item-2" style="max-width: 20rem;">
-            <h1 class="inlining"><a href="{% url 'gallery' %}">Gallery</a></h1>
-            <pre style="font-size: 0.9rem;"> <br><br>  🌌Sky images🌌<br><br>  🔭Telescopes images🔭<br><br>  🛰️Observatories images🛰️</pre>
-        </div>
+            <div class="home-item" id="gallery-backgraund" style="max-width: 20rem;">
+                <h1 class="inlining"><a href="{% url 'gallery' %}">Gallery</a></h1>
+                <pre style="font-size: 0.9rem;"> <br><br>  🌌Sky images🌌<br><br>  🔭Our observations🔭<br><br>  🛰️Our Research🛰️</pre>
+            </div>
 
-        <div class="home-item-3" style="max-width: 20rem;">
-            <h1 class="inlining"><a href="{% url 'calender' %}">Astronomical calendar</a></h1>
-            <pre style="font-size: 0.9rem;"> <br>  ☄️Astronomical Events☄️<br><br>  🌕Astronomical News🌕<br><br>  🚀Our Projects News🚀<br><br></pre>
-        </div>
+            <div class="home-item" id="calender-backgraund" style="max-width: 20rem;">
+                <h1 class="inlining"><a href="{% url 'calender' %}">Astronomical calendar</a></h1>
+                <pre style="font-size: 0.9rem;"> <br>  ☄️Astronomical Events☄️<br><br>  🌕Astronomical News🌕<br><br>  🚀Our Projects News🚀<br><br></pre>
+            </div>
 
-        <div class="home-item-4" style="max-width: 20rem;">
-            <h1 class="inlining"><a href="{% url 'about' %}">About us</a></h1>
-            <pre style="font-size: 0.9rem;"> <br><br>  💬Contact Us💬<br><br>  📡Our Observatories📡<br><br>  🔭Our Equipment🔭<br><br>  🎯Objectives & Activities🎯</pre>
-        </div>
+            <div class="home-item" id="about-backgraund" style="max-width: 20rem;">
+                <h1 class="inlining"><a href="{% url 'about' %}">About us</a></h1>
+                <pre style="font-size: 0.9rem;"> <br><br>  💬Contact Us💬<br><br>  📡Our Observatories📡<br><br>  🔭Our Equipment🔭<br><br>  🎯Objectives & Activities🎯</pre>
+            </div>
 
-    </ul>
+        </ul>
+    </div>
 {% endblock content %}

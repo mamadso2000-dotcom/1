@@ -15,7 +15,7 @@
     
 
     <!-- css file -->
-    <link href="{% static 'assets/css/Main.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'assets/css/main.css' %}" type="text/css" rel="stylesheet"/>
 
   </head>
 
@@ -33,7 +33,7 @@
             </form>
           {% else %}
             <a class="a" href="{% url 'login' %}">Login</a><pre>  </pre>
-            <a class="a" href="{% url 'sighnup' %}">Sighnup</a>
+            <a class="a" href="{% url 'signup' %}">Sign up</a>
           {% endif %}
         </span>
       </nav>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <hr>
+    <div class="planet-detail container">
+        <h1>{{ planet.name }}</h1>
+        <img src="{{ planet.image.url }}" alt="{{ planet.name }}_image">
+        <br><br><br><br><hr><br><br>
+        <ul>
+            <li><big class="bold-paragraph">Diameter : {{ planet.diameter }}</big></li><br>
+            <li><big class="bold-paragraph">Composition : {{ planet.composition }}</big></li><br>
+            <li><big class="bold-paragraph">Moons : {{ planet.moons}}</big></li><br>
+            <li><big class="bold-paragraph">Orbital data :</big><br>
+                <br>
+                <ul style="font-size: 1.15rem;">
+                    <li>Semi major axis : {{ planet.semi_major_axis }} AU</li><br>
+                    <li>Eccentricity : {{ planet.eccentricity }}</li><br>
+                    <li>Inclination : {{ planet.inclination }} </li><br>
+                    <li>Longitude of ascending node : {{ planet.longitude_of_ascending_node }}</li><br>
+                    <li>Argument of periapsis : {{ planet.argument_of_periapsis }}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+{% endblock content %}

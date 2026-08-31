@@ -27,7 +27,21 @@ pre{
 }
 
 /* id styls */
+#plans-backgraund{
+    background-image: url(img/plans.png);
+}
 
+#gallery-backgraund{
+    background-image: url(img/gallery.png);
+}
+
+#calender-backgraund{
+    background-image: url(img/calender.png);
+}
+
+#about-backgraund{
+    background-image: url(img/about.png);
+}
 
 /* class styls */
 .a{
@@ -61,70 +75,31 @@ pre{
     font-size: 3.5rem;
 }
 
-.home-item-1{
-    width: 24%;
+.home-item{
+    width: calc(24% - 22.5px);
     height: 200px;
 
     margin-right: 1%;
-    margin-left: 1%;
 
-    background-image: url(img/plans.png);
     background-size: 100%;
 
     color: antiquewhite;
     border-radius: 15px;
 }
 
-.home-item-2{
-    width: 24%;
-    height: 200px;
-
-    margin-right: 1%;
-    margin-left: 1%;
-
-    background-image: url(img/gallery.png);
-    background-size: 100%;
-
-    color: antiquewhite;
-    border-radius: 15px;
+.home-items{
+    margin-left: 45px;
+    margin-right: 35px;
 }
 
-.home-item-3{
-    width: 24%;
-    height: 200px;
-
-    margin-right: 1%;
-    margin-left: 1%;
-
-    background-image: url(img/calender.png);
-    background-size: 100%;
-
-    color: antiquewhite;
-    border-radius: 15px;
-}
-
-.home-item-4{
-    width: 24%;
-    height: 200px;
-
-    margin-right: 1%;
-    margin-left: 1%;
-
-    background-image: url(img/about.png);
-    background-size: 100%;
-
-    color: antiquewhite;
-    border-radius: 15px;
-}
-
-.home-ul{
+.inline-ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 
 .inlining{
     display: inline;
@@ -151,4 +126,43 @@ pre{
 .nav-header{
     color: inherit;
     font-size: 2rem;
+}
+
+.planet-detail{
+    color: antiquewhite;
+}
+
+.planet-detail h1 {
+    font-size: 3rem;
+}
+
+.planet-detail img {
+    width: 100%;
+}
+
+.planet-item {
+    width: calc(24% - 22.5px);
+    height: 200px;
+
+    margin-right: 1%;
+
+    background-color: black;
+    border-radius: 15px;
+
+    text-align: center;
+    max-width: 20rem;
+}
+
+.planet-item a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.planet-item h2 {
+    margin: 10px 0;
+}
+
+.planet-item img {
+    height: 130px;
+    margin-top: 15px;
 }
