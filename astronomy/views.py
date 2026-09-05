@@ -6,8 +6,8 @@ class GalleryView(ListView):
     template_name = 'gallery.html'
     model = Planet
 
-class CalenderView(ListView):
-    template_name = 'calender.html'
+class CalendarView(ListView):
+    template_name = 'calendar.html'
     model = Planet
 
 class PlansView(ListView):

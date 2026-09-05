@@ -13,25 +13,32 @@
     <div class="home-items">
         <ul class="inline-ul">
             <div class="home-item" id="plans-backgraund" style="max-width: 20rem;">
-                <h1 class="inlining"><a href="{% url 'plans' %}">Observation plans</a></h1>
-                <pre style="font-size: 0.9rem;"> <br><br>  🌕Moon🌕<br><br>  🪐Planets🪐<br><br>  ✨Deep-sky objects✨<br><br>  ☄️Meteor showers☄️</pre>
+                <a href="{% url 'plans' %}">
+                    <h1 class="inlining">Observation plans</h1>
+                    <pre style="font-size: 0.9rem;"> <br><br>  🌕Moon🌕<br><br>  🪐Planets🪐<br><br>  ✨Deep-sky objects✨<br><br>  ☄️Meteor showers☄️</pre>
+                </a>
             </div>
 
             <div class="home-item" id="gallery-backgraund" style="max-width: 20rem;">
-                <h1 class="inlining"><a href="{% url 'gallery' %}">Gallery</a></h1>
-                <pre style="font-size: 0.9rem;"> <br><br>  🌌Sky images🌌<br><br>  🔭Our observations🔭<br><br>  🛰️Our Research🛰️</pre>
+                <a href="{% url 'gallery' %}">
+                    <h1 class="inlining">Gallery</h1>
+                    <pre style="font-size: 0.9rem;"> <br><br>  🌌Sky images🌌<br><br>  🔭Our observations🔭<br><br>  🛰️Our Research🛰️</pre>
+                </a>
             </div>
 
-            <div class="home-item" id="calender-backgraund" style="max-width: 20rem;">
-                <h1 class="inlining"><a href="{% url 'calender' %}">Astronomical calendar</a></h1>
-                <pre style="font-size: 0.9rem;"> <br>  ☄️Astronomical Events☄️<br><br>  🌕Astronomical News🌕<br><br>  🚀Our Projects News🚀<br><br></pre>
+            <div class="home-item" id="calendar-backgraund" style="max-width: 20rem;">
+                <a href="{% url 'calendar' %}">
+                    <h1 class="inlining">Astronomical calendar</h1>
+                    <pre style="font-size: 0.9rem;"> <br>  ☄️Astronomical Events☄️<br><br>  🌕Astronomical News🌕<br><br>  🚀Our Projects News🚀<br><br></pre>
+                </a>
             </div>
 
             <div class="home-item" id="about-backgraund" style="max-width: 20rem;">
-                <h1 class="inlining"><a href="{% url 'about' %}">About us</a></h1>
-                <pre style="font-size: 0.9rem;"> <br><br>  💬Contact Us💬<br><br>  📡Our Observatories📡<br><br>  🔭Our Equipment🔭<br><br>  🎯Objectives & Activities🎯</pre>
+                <a href="{% url 'about' %}">
+                    <h1 class="inlining">About us</h1>
+                    <pre style="font-size: 0.9rem;"> <br><br>  💬Contact Us💬<br><br>  📡Our Observatories📡<br><br>  🔭Our Equipment🔭<br><br>  🎯Objectives & Activities🎯</pre>
+                </a>
             </div>
-
         </ul>
     </div>
 {% endblock content %}

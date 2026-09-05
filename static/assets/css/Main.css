@@ -35,8 +35,8 @@ pre{
     background-image: url(img/gallery.png);
 }
 
-#calender-backgraund{
-    background-image: url(img/calender.png);
+#calendar-backgraund{
+    background-image: url(img/calendar.png);
 }
 
 #about-backgraund{
@@ -87,9 +87,13 @@ pre{
     border-radius: 15px;
 }
 
+.home-item h1 {
+    font-size: 1.813rem;
+}
+
 .home-items{
-    margin-left: 45px;
-    margin-right: 35px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
 .inline-ul {
@@ -103,8 +107,8 @@ pre{
 
 .inlining{
     display: inline;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .logout-btn {
@@ -133,7 +137,8 @@ pre{
 }
 
 .planet-detail h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    text-align: center;
 }
 
 .planet-detail img {

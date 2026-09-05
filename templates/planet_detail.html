@@ -7,6 +7,16 @@
         <img src="{{ planet.image.url }}" alt="{{ planet.name }}_image">
         <br><br><br><br><hr><br><br>
         <ul>
+            {% if planet.pk == 1 %}
+                <li><big class="bold-paragraph">{{ planet.pk }}st Planet</big></li>
+            {% elif planet.pk == 2 %}
+                <li><big class="bold-paragraph">{{ planet.pk }}nd Planet</big></li>
+            {% elif planet.pk == 3 %}
+                <li><big class="bold-paragraph">{{ planet.pk }}rd Planet</big></li>
+            {% else %}
+                <li><big class="bold-paragraph">{{ planet.pk }}th Planet</big></li>
+            {% endif %}
+            <br>
             <li><big class="bold-paragraph">Diameter : {{ planet.diameter }}</big></li><br>
             <li><big class="bold-paragraph">Composition : {{ planet.composition }}</big></li><br>
             <li><big class="bold-paragraph">Moons : {{ planet.moons}}</big></li><br>
@@ -17,7 +27,9 @@
                     <li>Eccentricity : {{ planet.eccentricity }}</li><br>
                     <li>Inclination : {{ planet.inclination }} </li><br>
                     <li>Longitude of ascending node : {{ planet.longitude_of_ascending_node }}</li><br>
-                    <li>Argument of periapsis : {{ planet.argument_of_periapsis }}</li>
+                    <li>Argument of periapsis : {{ planet.argument_of_periapsis }}</li><br>
+                    <li>Mean anomaly : {{ planet.mean_anomaly }}</li><br>
+                    <li>Epoch : {{ planet.epoch }}</li>
                 </ul>
             </li>
         </ul>
