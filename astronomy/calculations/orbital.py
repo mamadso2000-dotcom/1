@@ -16,6 +16,7 @@ def calculate_mean_motion(period):
 
 # time different from epoch
 def calculate_days_since_epoch(epoch, target_date):
+    epoch = epoch.date()
     difference = target_date - epoch
     return difference.days
 

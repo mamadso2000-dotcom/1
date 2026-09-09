@@ -20,3 +20,12 @@ class Planet(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Event(models.Model):
+    event_type = models.CharField(max_length=50)
+
+    planet_A = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name="events_as_planet_A")
+    planet_B = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name="events_as_planet_B")
+
+    start_date = models.DateField()
+    end_date = models.DateField()

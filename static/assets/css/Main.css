@@ -53,9 +53,29 @@ pre{
     font-size: 1.5rem;
 }
 
+.calendar{
+    color: antiquewhite;
+}
+
+.calendar h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.calendar table {
+    text-align: center;
+}
+
+.calendar_li_h2{
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
 .container{
     margin-left: 100px;
     margin-right: 100px;
+    color: antiquewhite;
 }
 
 .home-div{

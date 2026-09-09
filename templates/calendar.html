@@ -1,7 +1,45 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
 
-    <hr>
+<hr>
+<div class="calendar container">
+    <ul class="inline-ul">
+        <li><h3><a href="{% url 'calendar_month' previous_year previous_month %}">previous</a></h3></li>
+        <li class="calendar_li_h2"><h2>{{ month }} / {{ year }}</h2></li>
+        <li><h3><a href="{% url 'calendar_month' next_year next_month %}">next</a></h3></li>
+    </ul>
+
+    <table>
+        <thead>
+            <th>monday</th>
+            <th>tuesday</th>
+            <th>wednesday</th>
+            <th>thursday</th>
+            <th>friday</th>
+            <th>saturday</th>
+            <th>sunday</th>
+        </thead>
+
+        <tbody>
+            {% for week in calendar_weeks %}
+                <tr>
+                    {% for day_data in week %}
+                        {% if day_data == None %}
+                            <td></td>
+                        {% else %}
+                            <td>
+                                {{ day_data.day }}
+                                {% for event in day_data.events %}
+                                    {{ event.planet_A.name }} - {{ event.planet_B.name }}
+                                {% endfor %}
+                            </td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock content %}
