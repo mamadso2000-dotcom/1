@@ -123,4 +123,20 @@ class Planet_Detail(DetailView):
     model = Planet
 
 class CalendarDayView(TemplateView):
-    template_name = 'calendar_day'
+    template_name = 'calendar_day.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        day = self.kwargs["day"]
+        month = self.kwargs["month"]
+        year = self.kwargs["year"]
+
+        
+        selected_date = date(year=year, month=month , day=day)
+        day_events = Event.objects.filter(start_date__lte=selected_date, end_date__gte=selected_date)
+        
+        context['selected_date'] = selected_date
+        context['day_events'] = day_events
+
+        return context

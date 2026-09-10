@@ -67,9 +67,42 @@ pre{
     text-align: center;
 }
 
-.calendar_li_h2{
+.calendar-li-h2{
     margin-left: 35%;
     margin-right: 35%;
+}
+
+.calendar-day{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.calendar-day h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.calendar-day-ul{
+    margin-top: 10px;
+    list-style: none;
+}
+
+.calendar-day-item{
+    width:1350px;
+    height: 160px;
+
+    background-size: 100%;
+
+    background-color: antiquewhite;
+    color: black;
+    border-radius: 15px;
+}
+
+.calendar-day-item h1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 2.5rem;
+    font-weight: 100;
 }
 
 .container{
@@ -116,7 +149,7 @@ pre{
     margin-right: 20px;
 }
 
-.inline-ul {
+.inline-ul{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
