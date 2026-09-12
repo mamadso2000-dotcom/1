@@ -20,7 +20,8 @@ class Planet(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
 class Event(models.Model):
     event_type = models.CharField(max_length=50)
 
@@ -29,3 +30,9 @@ class Event(models.Model):
 
     start_date = models.DateField()
     end_date = models.DateField()
+
+
+class ObservationPlan(models.Model):
+    event = models.OneToOneField(Event, on_delete=models.CASCADE)
+    observation_date = models.DateField()
+    angular_separation = models.FloatField()
