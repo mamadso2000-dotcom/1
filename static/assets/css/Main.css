@@ -224,3 +224,50 @@ pre{
     height: 130px;
     margin-top: 15px;
 }
+
+.plans{
+    color: antiquewhite;
+}
+
+.plans h1 {
+    text-align: center;
+}
+
+.plan-item{
+    width: calc(24% - 22.5px);
+    height: 200px;
+
+    margin-right: 1%;
+
+    background-size: 100%;
+
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+
+.plan-item h1 {
+    font-size: 1.813rem;
+}
+
+.plan-item p {
+    margin: 3%;
+}
+
+.plan-items{
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.plan-detail{
+    color: antiquewhite;
+}
+
+.plan-detail h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.plan-detail big {
+    font-size: 2.5rem;
+}

@@ -2,7 +2,7 @@ import calendar
 from datetime import date, timedelta
 from django.views.generic import ListView, DetailView, TemplateView
 from django.shortcuts import redirect
-from .models import Planet, Event
+from .models import Planet, Event, ObservationPlan
 from django.shortcuts import redirect
 
 
@@ -114,8 +114,8 @@ class CalendarView(ListView):
 
 class PlansView(ListView):
     template_name = 'plans.html'
-    model = Planet
-
+    model = ObservationPlan
+    context_object_name = 'plans'
 
 # son views
 class Planet_Detail(DetailView):
@@ -140,3 +140,13 @@ class CalendarDayView(TemplateView):
         context['day_events'] = day_events
 
         return context
+
+
+class PlanDetailView(DetailView):
+    template_name = 'plan_detail.html'
+    model = ObservationPlan
+    context_object_name = 'plan'
+
+    def get_object(self, **kwargs):
+        event_id = self.kwargs["event_id"]
+        return ObservationPlan.objects.get(event_id=event_id)

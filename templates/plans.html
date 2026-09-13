@@ -3,5 +3,20 @@
 {% block content %}
 
     <hr>
+    <div class="plans container">
+        <h1>Observation Plans</h1>
+        <div class="plan-items">
+            <ul class="inline-ul">
+                {% for plan in plans %}
+                    <div class="plan-item" style="max-width: 20rem;">
+                        <a href="{% url 'plan_detail' plan.event.id %}">
+                            <h1 class="inlining">{{ plan.event.event_type }}</h1><br>
+                            <p><pre style="font-size: 0.9rem;">   planets : {{ plan.event.planet_A.name }} & {{ plan.event.planet_B.name }} <br>   from : {{ plan.event.start_date }} <br>   to : {{ plan.event.end_date }} <br>   observation : {{ plan.observation_date }} <br>   sparation : {{ plan.angular_separation }}</pre>
+                        </a>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
 {% endblock content %}

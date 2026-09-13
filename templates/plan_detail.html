@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <hr>
+    <div class="plan-detail container">
+        <h1>{{ plan.event.event_type }}</h1>
+        <big>planets : {{ plan.event.planet_A.name }} & {{ plan.event.planet_B.name }}</big><br><br>
+        <big>from : {{ plan.event.start_date }}</big><br><br>
+        <big>to : {{ plan.event.end_date }}</big><br><br>
+        <big>observation time : {{ plan.observation_date }}</big><br><br>
+        <big>best sparation : {{ plan.angular_separation }}</big><br><br>
+        <button>Reserve</button>
+    </div>
+
+{% endblock content %}
