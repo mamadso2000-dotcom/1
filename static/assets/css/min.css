@@ -49,6 +49,14 @@ pre{
     font-size: 1.5rem;
 }
 
+.about{
+    color: antiquewhite;
+}
+
+.about h1 {
+    text-align: center;
+}
+
 .bold-paragraph{
     font-size: 1.5rem;
 }
