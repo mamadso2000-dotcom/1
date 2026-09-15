@@ -15,7 +15,7 @@ class GalleryView(ListView):
 class CalendarView(ListView):
     # basic datas
     template_name = "calendar.html"
-    model = Planet
+    model = Event
 
     # is custom date
     def get(self, request, *args, **kwargs):

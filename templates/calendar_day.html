@@ -10,11 +10,14 @@
                 <ul class="calendar-day-ul">
                     <li>
                         <div class="calendar-day-item">
-                            <h1>{{ event.event_type }}</h1>
-                            <ul class="calendar-day-ul">
-                                <li><big>Between : {{ event.planet_B }} & {{ event.planet_A }}</big></li><br>
-                                <li><big>time : from {{ event.start_date }} to {{ event.end_date }}</big></li>
-                            </ul>
+                            <a href="{% url 'plan_detail' event.id %}">
+                                <h1>{{ event.event_type }}</h1>
+                                <ul class="calendar-day-ul">
+                                    <li><big>Between : {{ event.planet_B }} & {{ event.planet_A }}</big></li><br>
+                                    <li><big>time : from {{ event.start_date }} to {{ event.end_date }}</big></li>
+                                    <li><h2>View Observation Plan</h2></li>
+                                </ul>
+                            </a>
                         </div>
                     </li>
                 </ul>
