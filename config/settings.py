@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'about',
     'accounts',
     'astronomy',
+    'programs',
+    'projects',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'

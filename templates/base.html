@@ -1,5 +1,4 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
 
@@ -10,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title and icon -->
-    <title>Night Sky Observatory</title>
+    <title>World Data</title>
     <link href="{% static 'assets/img/ICON.png' %}" rel="icon">
     
 
     <!-- css file -->
-    <link href="{% static 'assets/css/min.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'assets/css/main.css' %}" type="text/css" rel="stylesheet"/>
 
   </head>
 
@@ -23,19 +22,36 @@
 
     <header>
       <nav>
-        <a href="{% url 'home' %}" class="nav-header"><b>Night Sky Observatory</b></a>
-        <pre>   </pre>
-        <span>
-          {% if user.is_authenticated %}
-            <form action="{% url 'logout' %}" method="post" class="logout-form">
-              {% csrf_token %}
-              <button type="submit" class="logout-btn">Logout</button>
-            </form>
-          {% else %}
-            <a class="a" href="{% url 'login' %}">Login</a><pre>  </pre>
-            <a class="a" href="{% url 'signup' %}">Sign up</a>
-          {% endif %}
-        </span>
+        <div class="nav-brand">
+          <a href="{% url 'home' %}" class="nav-header"><b>World Data</b></a>
+        </div>
+
+        <div class="nav-links">
+            <a href="" class="a">Astronomy</a>
+            <a href="" class="a">Projects</a>
+            <a href="" class="a">Programs</a>
+            <a href="{% url 'about' %}" class="a">About</a>
+        </div>
+
+        <div class="nav-user">
+          <details class="user-dropdown">
+            <summary>User</summary>
+
+            <div class="user-menu">
+              {% if user.is_authenticated %}
+                <form action="{% url 'logout' %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" class="logout-btn">
+                    Logout
+                  </button>
+                </form>
+              {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Sign up</a>
+              {% endif %}
+            </div>
+          </details>
+        </div>
       </nav>
     </header>
 
@@ -44,7 +60,29 @@
       {% endblock content %}
     </main>
 
-    <footer></footer>
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+          <a href="{% url 'home' %}"><h1>World Data</h1></a>
+          <p>World Data is a project envisioned to create a data and science-focused repository with a special emphasis on astronomy and space. Its objective is to develop tools and infrastructure for collecting, processing, and utilizing scientific data, transforming it into actionable information. The project’s development trajectory begins with ground-based and observatory initiatives and has the potential to expand into satellite systems and space-based projects in the future.</p>
+        </div>
+
+        <div class="footer-links">
+          <h2>Useful Links</h2>
+          <a href="{% url 'plans' %}">observation plans</a>
+          <a href="">Worlds 3D model</a>
+          <a href="">projects</a>
+        </div>
+
+        <div class="footer-contact">
+          <h2>Contact Us</h2>
+          <p>phone number : +989999999999 <br>email : gmail@gmail.com <br>address : tehran, azadi sq</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 World Data. All rights reserved.</p>
+      </div>
+    </footer>
 
     <!-- js file -->
     <script src="{% static 'assets/js/main.js' %}" crossorigin="anonymous"></script>

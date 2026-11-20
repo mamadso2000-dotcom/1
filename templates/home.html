@@ -1,44 +1,148 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-    <!-- Observatory document -->
-    <div class="home-div">
-        <h1 class="home-h1">Night Sky Observatory</h1>
-        <p class="bold-paragraph">Don't just gaze at the night sky; discover it.<br>At the Night Sky Observatory, gaze at the moon, planets, stars, and wonders of the deep with professional telescopes.<br>Look at the cosmos and enjoy a unique astronomical experience.</p>
-        <b class="bold-paragraph"><a href="{% url 'about' %}">Read more</a></b>
-    </div>
+    <section class="home-hero">
+        <div class="home-hero-content">
 
-    <!-- main objects -->
-    <div class="home-items">
-        <ul class="inline-ul">
-            <div class="home-item" id="plans-backgraund" style="max-width: 20rem;">
-                <a href="{% url 'plans' %}">
-                    <h1 class="inlining">Observation plans</h1>
-                    <pre style="font-size: 0.9rem;"> <br><br>  🌕Moon🌕<br><br>  🪐Planets🪐<br><br>  ✨Deep-sky objects✨<br><br>  ☄️Meteor showers☄️</pre>
+            <span class="home-hero-label">
+                SCIENCE · ASTRONOMY · DATA
+            </span>
+
+            <h1>
+                Exploring the Universe Through Data
+            </h1>
+
+            <p>
+                Building a scientific future through astronomical data,
+                knowledge, and technology.
+            </p>
+
+            <div class="home-hero-actions">
+                <a href="#world-data-paths" class="hero-btn hero-btn-primary">
+                    Explore World Data
+                </a>
+
+                <a href="{% url 'about' %}" class="hero-btn hero-btn-secondary">
+                    Discover Our Vision
                 </a>
             </div>
 
-            <div class="home-item" id="gallery-backgraund" style="max-width: 20rem;">
-                <a href="{% url 'gallery' %}">
-                    <h1 class="inlining">Gallery</h1>
-                    <pre style="font-size: 0.9rem;"> <br><br>  🌌Sky images🌌<br><br>  🔭Our observations🔭<br><br>  🛰️Our Research🛰️</pre>
-                </a>
-            </div>
+        </div>
 
-            <div class="home-item" id="calendar-backgraund" style="max-width: 20rem;">
-                <a href="{% url 'calendar' %}">
-                    <h1 class="inlining">Astronomical calendar</h1><br>
-                    <pre style="font-size: 0.9rem;"> <br>  ☄️Astronomical Events☄️<br><br>  🌕Astronomical News🌕<br><br>  🚀Our Projects News🚀<br><br></pre>
-                </a>
-            </div>
+        <div class="home-hero-overlay"></div>
+    </section>
 
-            <div class="home-item" id="about-backgraund" style="max-width: 20rem;">
-                <a href="{% url 'about' %}">
-                    <h1 class="inlining">About us</h1>
-                    <pre style="font-size: 0.9rem;"> <br><br>  💬Contact Us💬<br><br>  📡Our Observatories📡<br><br>  🔭Our Equipment🔭<br><br>  🎯Objectives & Activities🎯</pre>
-                </a>
-            </div>
-        </ul>
-    </div>
+    <section class="home-intro">
+
+        <div class="home-intro-content">
+
+            <span class="section-label">ABOUT WORLD DATA</span>
+
+            <h2>A New Perspective on the Universe</h2>
+
+            <p>
+                World Data is a science and data-focused initiative
+                dedicated to exploring, collecting, organizing, and
+                utilizing scientific information, with a special
+                emphasis on astronomy and space.
+            </p>
+
+            <p>
+                Our vision is to connect astronomical knowledge,
+                technology, and data to build a foundation for
+                future scientific exploration.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="home-paths" id="world-data-paths">
+
+        <div class="home-paths-heading">
+            <span class="section-label">EXPLORE WORLD DATA</span>
+
+            <h2>Discover Our Main Paths</h2>
+
+            <p>
+                Explore our knowledge, projects, and opportunities
+                to participate in scientific discovery.
+            </p>
+        </div>
+
+        <div class="home-paths-grid">
+
+            <!-- Astronomy -->
+            <a href="#" class="path-card">
+                <img src="{% static 'assets/img/astronomy.jpg' %}"
+                    alt="Astronomy">
+
+                <div class="path-card-overlay">
+                    <h3>Astronomy</h3>
+
+                    <p>
+                        Explore the universe through astronomical
+                        knowledge, data, and discoveries.
+                    </p>
+
+                    <span>Explore Astronomy →</span>
+                </div>
+            </a>
+
+            <!-- Projects -->
+            <a href="#" class="path-card">
+                <img src="{% static 'assets/img/projects.jpg' %}"
+                    alt="World Data Projects">
+
+                <div class="path-card-overlay">
+                    <h3>Projects</h3>
+
+                    <p>
+                        Discover the projects and scientific
+                        initiatives developed by World Data.
+                    </p>
+
+                    <span>Explore Projects →</span>
+                </div>
+            </a>
+
+            <!-- Programs -->
+            <a href="#" class="path-card">
+                <img src="{% static 'assets/img/programs.jpg' %}"
+                    alt="Astronomy Programs">
+
+                <div class="path-card-overlay">
+                    <h3>Programs</h3>
+
+                    <p>
+                        Take part in astronomical observations
+                        and scientific activities.
+                    </p>
+
+                    <span>Explore Programs →</span>
+                </div>
+            </a>
+
+            <!-- About -->
+            <a href="{% url 'about' %}" class="path-card">
+                <img src="{% static 'assets/img/about.jpg' %}"
+                    alt="About World Data">
+
+                <div class="path-card-overlay">
+                    <h3>About</h3>
+
+                    <p>
+                        Learn about our identity, vision,
+                        mission, and future direction.
+                    </p>
+
+                    <span>Discover Our Vision →</span>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
 {% endblock content %}
