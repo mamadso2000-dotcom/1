@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="projects-grid">
+
+        {% for project in project_list %}
+            {% with project.images.first as project_image %}
+                <div class="project-card"
+                    {% if project_image %}
+                    style="background-image: linear-gradient(rgba(8, 15, 32, 0.45), rgba(8, 15, 32, 0.9)), url('{{ project_image.image.url }}');"
+                    {% endif %}>
+
+                    <div class="project-card-content">
+                        <h2>{{ project.name }}</h2>
+                        <h3>{{ project.get_current_status_display }}</h3>
+                        <a href="{% url 'project_detail' project.id %}">Read More</a>
+                    </div>
+
+                </div>
+            {% endwith %}
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}

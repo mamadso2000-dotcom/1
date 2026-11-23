@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="project-detail-container">
+
+        <header class="project-detail-header">
+            <h1>{{ project.name }}</h1>
+        </header>
+
+        <section class="project-info">
+            <h3>Status: {{ project.get_current_status_display }}</h3>
+            <h3>Start Date: {{ project.start_date|date:"Y-m-d" }}</h3>
+
+            {% if project.end_date %}
+                <h3>End Date: {{ project.end_date|date:"Y-m-d" }}</h3>
+            {% endif %}
+        </section>
+
+        <section class="project-description">
+            <p>{{ project.details }}</p>
+        </section>
+
+        <section class="project-gallery">
+            {% for image in project.images.all %}
+                <img src="{{ image.image.url }}" alt="{{ project.name }} image">
+            {% endfor %}
+        </section>
+
+    </div>
+
+{% endblock content %}
