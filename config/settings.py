@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'about',
     'accounts',
     'astronomy',
-    'programs',
     'projects',
 ]
 

@@ -1,7 +1,6 @@
 /* =================================
    WORLD DATA — DESIGN SYSTEM
 ================================= */
-
 :root {
     /* Background colors */
     --color-bg: #080F20;
@@ -71,7 +70,7 @@ select {
    NAVBAR
 ================================= */
 
-header {
+header:has(> nav) {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -964,6 +963,220 @@ footer {
 }
 
 
+/* Plans Page */
+
+.plans-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+/* Header */
+
+.plans-header {
+    margin-bottom: 40px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.plans-header h1 {
+    color: var(--color-text);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.plans-header p {
+    color: var(--color-text-muted);
+    font-size: 16px;
+}
+
+/* Plan Grid */
+
+.plan-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Plan Card */
+
+.plan-item {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+
+    text-decoration: none;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                background-color 0.25s ease;
+}
+
+.plan-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    background-color: var(--color-elevated);
+}
+
+.plan-item h2 {
+    color: var(--color-accent);
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.plan-info p {
+    color: var(--color-text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.plan-info strong {
+    color: var(--color-text);
+}
+
+.plan-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .plan-items {
+        grid-template-columns: 1fr;
+    }
+
+    .plans-container {
+        margin-top: 35px;
+    }
+
+    .plans-header h1 {
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   PLAN DETAIL
+========================= */
+
+.plan-detail-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+/* Header */
+
+.plan-detail-header {
+    position: static;
+    margin-bottom: 35px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.plan-detail-header h1 {
+    position: static;
+    color: var(--color-text);
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.plan-detail-header p {
+    color: var(--color-text-muted);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Information Grid */
+
+.plan-detail-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Information Cards */
+
+.plan-detail-item {
+    padding: 25px;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: border-color var(--transition-default),
+                background-color var(--transition-default);
+}
+
+.plan-detail-item:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-elevated);
+}
+
+.plan-detail-item h3 {
+    color: var(--color-accent);
+    font-size: 16px;
+    margin: 0 0 12px;
+}
+
+.plan-detail-item p {
+    color: var(--color-text);
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Actions */
+
+.plan-detail-actions {
+    margin-top: 35px;
+}
+
+.plan-detail-actions button {
+    padding: 13px 30px;
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-default),
+                transform var(--transition-default);
+}
+
+.plan-detail-actions button:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .plan-detail-container {
+        margin-top: 35px;
+    }
+
+    .plan-detail-info {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-detail-header h1 {
+        font-size: 28px;
+    }
+}
+
 /*.............................................................................*/
 
 .about{
@@ -1080,51 +1293,4 @@ footer {
 .planet-item img {
     height: 130px;
     margin-top: 15px;
-}
-
-.plans{
-    color: antiquewhite;
-}
-
-.plans h1 {
-    text-align: center;
-}
-
-.plan-item{
-    width: calc(24% - 22.5px);
-    height: 200px;
-
-    margin-right: 1%;
-
-    background-size: 100%;
-
-    color: black;
-    background-color: antiquewhite;
-    border-radius: 15px;
-}
-
-.plan-item h1 {
-    font-size: 1.813rem;
-}
-
-.plan-item p {
-    margin: 3%;
-}
-
-.plan-items{
-    margin-left: 30px;
-    margin-right: 20px;
-}
-
-.plan-detail{
-    color: antiquewhite;
-}
-
-.plan-detail h1 {
-    text-align: center;
-    font-size: 3rem;
-}
-
-.plan-detail big {
-    font-size: 2.5rem;
 }

@@ -2,15 +2,46 @@
 
 {% block content %}
 
-    <hr>
-    <div class="plan-detail container">
-        <h1>{{ plan.event.event_type }}</h1>
-        <big>planets : {{ plan.event.planet_A.name }} & {{ plan.event.planet_B.name }}</big><br><br>
-        <big>from : {{ plan.event.start_date }}</big><br><br>
-        <big>to : {{ plan.event.end_date }}</big><br><br>
-        <big>observation time : {{ plan.observation_date }}</big><br><br>
-        <big>best sparation : {{ plan.angular_separation }}</big><br><br>
-        <button>Reserve</button>
+    <div class="plan-detail-container">
+
+        <header class="plan-detail-header">
+            <h1>{{ plan.event.event_type }}</h1>
+            <p>Detailed information about this observation opportunity.</p>
+        </header>
+
+        <section class="plan-detail-info">
+
+            <div class="plan-detail-item">
+                <h3>Planets</h3>
+                <p>{{ plan.event.planet_A.name }} & {{ plan.event.planet_B.name }}</p>
+            </div>
+
+            <div class="plan-detail-item">
+                <h3>Event Starts</h3>
+                <p>{{ plan.event.start_date }}</p>
+            </div>
+
+            <div class="plan-detail-item">
+                <h3>Event Ends</h3>
+                <p>{{ plan.event.end_date }}</p>
+            </div>
+
+            <div class="plan-detail-item">
+                <h3>Observation Date</h3>
+                <p>{{ plan.observation_date }}</p>
+            </div>
+
+            <div class="plan-detail-item">
+                <h3>Best Angular Separation</h3>
+                <p>{{ plan.angular_separation }}</p>
+            </div>
+
+        </section>
+
+        <div class="plan-detail-actions">
+            <button type="button">Reserve</button>
+        </div>
+
     </div>
 
 {% endblock content %}
