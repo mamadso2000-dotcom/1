@@ -2,30 +2,78 @@
 
 {% block content %}
 
-    <hr>
-    <div class="calendar-day">
-        <h1>{{ selected_date }}</h1>
-        {% if day_events %}
-            {% for event in day_events %}
-                <ul class="calendar-day-ul">
-                    <li>
-                        <div class="calendar-day-item">
-                            <a href="{% url 'plan_detail' event.id %}">
-                                <h1>{{ event.event_type }}</h1>
-                                <ul class="calendar-day-ul">
-                                    <li><big>Between : {{ event.planet_B }} & {{ event.planet_A }}</big></li><br>
-                                    <li><big>time : from {{ event.start_date }} to {{ event.end_date }}</big></li>
-                                    <li><h2>View Observation Plan</h2></li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <br><hr><br>
-            {% endfor %}
-        {% else %}
-            <h1>There are no events on this date.</h1>
-        {% endif %}
+    <div class="calendar-day-container">
+
+        <section class="calendar-day-header">
+            <div class="calendar-day-header-content">
+                <span class="calendar-day-label">ASTRONOMICAL CALENDAR</span>
+                <h1>Events on {{ selected_date }}</h1>
+                <p>Discover the astronomical events taking place on this date.</p>
+            </div>
+        </section>
+
+        <section class="calendar-day-section">
+
+            {% if day_events %}
+
+                <div class="calendar-day-heading">
+                    <h2>Daily Events</h2>
+                    <p>Explore the details of each astronomical event.</p>
+                </div>
+
+                <div class="calendar-day-events">
+
+                    {% for event in day_events %}
+
+                        <article class="calendar-day-card">
+
+                            <div class="calendar-day-card-header">
+                                <span class="calendar-day-event-label">ASTRONOMICAL EVENT</span>
+                                <h2>{{ event.event_type }}</h2>
+                            </div>
+
+                            <div class="calendar-day-card-info">
+
+                                <div class="calendar-day-info-item">
+                                    <h3>Planets</h3>
+                                    <p>{{ event.planet_A.name }} & {{ event.planet_B.name }}</p>
+                                </div>
+
+                                <div class="calendar-day-info-item">
+                                    <h3>Event Starts</h3>
+                                    <p>{{ event.start_date }}</p>
+                                </div>
+
+                                <div class="calendar-day-info-item">
+                                    <h3>Event Ends</h3>
+                                    <p>{{ event.end_date }}</p>
+                                </div>
+
+                            </div>
+
+                            <div class="calendar-day-card-action">
+                                <a href="{% url 'plan_detail' event.id %}">
+                                    View Observation Plan
+                                </a>
+                            </div>
+
+                        </article>
+
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+                <div class="calendar-day-empty">
+                    <h2>No Astronomical Events</h2>
+                    <p>There are no events scheduled for this date.</p>
+                </div>
+
+            {% endif %}
+
+        </section>
+
     </div>
 
 {% endblock content %}

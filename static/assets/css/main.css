@@ -1177,120 +1177,1182 @@ footer {
     }
 }
 
-/*.............................................................................*/
 
-.about{
-    color: antiquewhite;
+/* ==============================
+   About Page
+============================== */
+
+.about-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 60px 0;
+    color: var(--color-text);
 }
 
-.about h1 {
-    text-align: center;
+/* About Intro */
+
+.about-intro {
+    padding: 65px 55px;
+    margin-bottom: 65px;
+    background: linear-gradient(
+        135deg,
+        var(--color-surface),
+        var(--color-card)
+    );
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
 }
 
-.bold-paragraph{
-    font-size: 1.5rem;
+.about-intro::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -120px;
+    right: -80px;
+    background: var(--color-accent);
+    opacity: 0.08;
+    filter: blur(70px);
+    border-radius: 50%;
 }
 
-.calendar{
-    color: antiquewhite;
+.about-intro-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
 }
 
-.calendar h2 {
-    font-size: 2rem;
-    font-weight: 100;
-    text-align: center;
-}
-
-.calendar table {
-    text-align: center;
-}
-
-.calendar-li-h2{
-    margin-left: 35%;
-    margin-right: 35%;
-}
-
-.calendar-day{
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.calendar-day h1 {
-    font-size: 3rem;
-    text-align: center;
-}
-
-.calendar-day-ul{
-    margin-top: 10px;
-    list-style: none;
-}
-
-.calendar-day-item{
-    width:1350px;
-    height: 200px;
-
-    background-size: 100%;
-
-    background-color: antiquewhite;
-    color: black;
-    border-radius: 15px;
-}
-
-.calendar-day-item h1 {
-    margin-top: 10px;
-    margin-left: 10px;
+.about-intro h1 {
     font-size: 2.5rem;
-    font-weight: 100;
+    margin-bottom: 25px;
+    color: var(--color-accent);
 }
 
-.container{
-    margin-left: 100px;
-    margin-right: 100px;
-    color: antiquewhite;
+.about-intro p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 2;
 }
 
-.inlining{
-    display: inline;
-    margin-left: 5px;
-    margin-right: 5px;
+
+/* Goals & Projects */
+
+.about-goals-projects {
+    margin-bottom: 65px;
 }
 
-.planet-detail{
-    color: antiquewhite;
+.about-section-heading {
+    margin-bottom: 35px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--color-border);
 }
 
-.planet-detail h1 {
-    font-size: 4rem;
-    text-align: center;
+.about-section-heading h2,
+.about-contact h2 {
+    font-size: 2rem;
+    color: var(--color-accent);
 }
 
-.planet-detail img {
+.about-goals,
+.about-projects {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.about-goals h3,
+.about-projects h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+.about-goals p,
+.about-projects > p,
+.about-phase p,
+.about-contact p {
+    color: var(--color-text-muted);
+    line-height: 1.9;
+}
+
+
+/* Project Phases */
+
+.about-phase {
+    margin-top: 25px;
+    padding: 22px 25px;
+    background: var(--color-card);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 8px;
+}
+
+.about-phase h4 {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+
+/* Contact */
+
+.about-contact {
+    padding: 40px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+}
+
+.about-contact h2 {
+    margin-bottom: 20px;
+}
+
+.about-contact p {
+    max-width: 900px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .about-container {
+        padding: 35px 0;
+    }
+
+    .about-intro {
+        padding: 40px 28px;
+        margin-bottom: 45px;
+    }
+
+    .about-intro h1 {
+        font-size: 2rem;
+    }
+
+    .about-intro p {
+        font-size: 0.95rem;
+    }
+
+    .about-section-heading h2,
+    .about-contact h2 {
+        font-size: 1.7rem;
+    }
+
+    .about-goals,
+    .about-projects {
+        padding: 25px 20px;
+    }
+
+    .about-contact {
+        padding: 30px 22px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about-intro {
+        padding: 32px 22px;
+    }
+
+    .about-intro h1 {
+        font-size: 1.7rem;
+    }
+
+    .about-goals h3,
+    .about-projects h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-phase {
+        padding: 18px;
+    }
+
+}
+
+
+/* ==============================
+   Astronomy Page
+============================== */
+
+.astronomy-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 60px 0;
+    color: var(--color-text);
+}
+
+/* Hero Section */
+
+.astronomy-hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    margin-bottom: 65px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 15, 32, 0.96),
+            rgba(8, 15, 32, 0.55)
+        ),
+        url("../img/astronomy-bg.jpg") center / cover no-repeat;
+
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+}
+
+.astronomy-hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.astronomy-hero h1 {
+    font-size: 2.7rem;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.astronomy-hero p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+
+/* Section Heading */
+
+.astronomy-section-heading {
+    margin-bottom: 35px;
+}
+
+.astronomy-section-heading h2 {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.astronomy-section-heading p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+
+/* Astronomy Grid */
+
+.astronomy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.astronomy-card {
+    min-height: 240px;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        var(--color-card),
+        var(--color-surface)
+    );
+
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    transition: var(--transition-default);
+}
+
+.astronomy-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    background: var(--color-elevated);
+}
+
+.astronomy-card-content {
     width: 100%;
 }
 
-.planet-item {
-    width: calc(24% - 22.5px);
-    height: 200px;
-
-    margin-right: 1%;
-
-    background-color: black;
-    border-radius: 15px;
-
-    text-align: center;
-    max-width: 20rem;
+.astronomy-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 15px;
 }
 
-.planet-item a {
-    color: antiquewhite;
+.astronomy-card p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.astronomy-card a {
+    display: inline-block;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-default);
+}
+
+.astronomy-card a:hover {
+    color: var(--color-accent-hover);
+}
+
+.astronomy-coming-soon {
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    padding: 7px 13px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .astronomy-container {
+        padding: 35px 0;
+    }
+
+    .astronomy-hero {
+        min-height: 300px;
+        padding: 40px 30px;
+        margin-bottom: 45px;
+    }
+
+    .astronomy-hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .astronomy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .astronomy-card {
+        min-height: 210px;
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .astronomy-hero {
+        min-height: 270px;
+        padding: 30px 22px;
+    }
+
+    .astronomy-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .astronomy-hero p {
+        font-size: 0.95rem;
+    }
+
+    .astronomy-section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+/* ==============================
+   Gallery Page
+============================== */
+
+.gallery-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 60px 0;
+    color: var(--color-text);
+}
+
+/* Gallery Header */
+
+.gallery-header {
+    margin-bottom: 50px;
+    padding: 45px;
+    background: linear-gradient(
+        135deg,
+        var(--color-surface),
+        var(--color-card)
+    );
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+}
+
+.gallery-header h1 {
+    color: var(--color-accent);
+    font-size: 2.4rem;
+    margin-bottom: 18px;
+}
+
+.gallery-header p {
+    max-width: 750px;
+    color: var(--color-text-muted);
+    line-height: 1.9;
+}
+
+
+/* Planet Gallery */
+
+.planet-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.planet-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    transition: var(--transition-default);
+}
+
+.planet-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-accent);
+}
+
+.planet-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
     text-decoration: none;
 }
 
-.planet-item h2 {
-    margin: 10px 0;
+
+/* Planet Image */
+
+.planet-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: var(--color-card);
 }
 
-.planet-item img {
-    height: 130px;
-    margin-top: 15px;
+.planet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.planet-card:hover .planet-image img {
+    transform: scale(1.06);
+}
+
+
+/* Planet Card Content */
+
+.planet-card-content {
+    padding: 23px;
+}
+
+.planet-card-content h2 {
+    color: var(--color-accent);
+    font-size: 1.45rem;
+    margin-bottom: 20px;
+}
+
+.planet-card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.planet-card-info p {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background: var(--color-card);
+    border-radius: 8px;
+}
+
+.planet-card-info span {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
+.planet-card-info strong {
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+.planet-card-action {
+    display: inline-block;
+    color: var(--color-accent);
+    font-weight: 600;
+    transition: var(--transition-default);
+}
+
+.planet-card:hover .planet-card-action {
+    color: var(--color-accent-hover);
+}
+
+
+/* Empty Gallery */
+
+.gallery-empty {
+    grid-column: 1 / -1;
+    padding: 35px;
+    text-align: center;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .planet-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-container {
+        padding: 35px 0;
+    }
+
+    .gallery-header {
+        padding: 30px 22px;
+        margin-bottom: 35px;
+    }
+
+    .gallery-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .planet-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .planet-image {
+        height: 250px;
+    }
+}
+
+
+/* ==============================
+   Planet Detail Page
+============================== */
+
+.planet-detail-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 60px 0;
+    color: var(--color-text);
+}
+
+
+/* Planet Overview */
+
+.planet-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 35px;
+    margin-bottom: 65px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+}
+
+.planet-overview-image {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--color-card);
+}
+
+.planet-overview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.planet-overview-content {
+    padding: 20px;
+}
+
+.planet-detail-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.planet-overview-content h1 {
+    margin-bottom: 20px;
+    color: var(--color-accent);
+    font-size: 2.7rem;
+}
+
+.planet-overview-content p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+
+/* Detail Sections */
+
+.planet-detail-section {
+    margin-bottom: 60px;
+}
+
+.planet-detail-heading {
+    margin-bottom: 30px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.planet-detail-heading h2 {
+    color: var(--color-accent);
+    font-size: 1.9rem;
+}
+
+
+/* Information Grid */
+
+.planet-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.planet-detail-card {
+    min-width: 0;
+    padding: 25px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: var(--transition-default);
+}
+
+.planet-detail-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.planet-detail-card h3 {
+    margin-bottom: 15px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.planet-detail-card p {
+    color: var(--color-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .planet-overview {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .planet-overview-image {
+        height: 320px;
+    }
+
+    .planet-detail-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .planet-detail-container {
+        padding: 35px 0;
+    }
+
+    .planet-overview {
+        padding: 20px;
+        margin-bottom: 45px;
+    }
+
+    .planet-overview-image {
+        height: 240px;
+    }
+
+    .planet-overview-content {
+        padding: 10px 5px;
+    }
+
+    .planet-overview-content h1 {
+        font-size: 2rem;
+    }
+
+    .planet-detail-heading h2 {
+        font-size: 1.55rem;
+    }
+
+    .planet-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .planet-detail-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* Astronomy Calendar */
+
+.calendar-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 50px 0 70px;
+}
+
+/* Calendar Header */
+
+.calendar-header {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    padding: 45px;
+    margin-bottom: 45px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background:
+        linear-gradient(90deg, rgba(8, 15, 32, 0.96), rgba(16, 28, 53, 0.72)),
+        url("../img/astronomy-bg.jpg") center/cover;
+}
+
+.calendar-header-content {
+    max-width: 700px;
+}
+
+.calendar-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.calendar-header h1 {
+    margin-bottom: 15px;
+    color: var(--color-text);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.calendar-header p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Calendar Section */
+
+.calendar-section {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--color-surface);
+}
+
+/* Month Navigation */
+
+.calendar-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.calendar-navigation h2 {
+    color: var(--color-text);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.calendar-nav-link {
+    padding: 10px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: var(--transition-default);
+}
+
+.calendar-nav-link:hover {
+    background: var(--color-card);
+    border-color: var(--color-accent);
+    color: var(--color-accent-hover);
+}
+
+/* Calendar Table */
+
+.calendar-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.calendar-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: separate;
+    border-spacing: 6px;
+    table-layout: fixed;
+}
+
+.calendar-table th {
+    padding: 15px 8px;
+    color: var(--color-accent);
+    background: var(--color-card);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.calendar-table td {
+    height: 115px;
+    padding: 8px;
+    vertical-align: top;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-card);
+    transition: var(--transition-default);
+}
+
+.calendar-table td.calendar-empty-day {
+    background: transparent;
+    border-color: transparent;
+}
+
+.calendar-day {
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background: var(--color-elevated);
+    border-color: var(--color-accent);
+}
+
+.calendar-day-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.calendar-day-number {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.calendar-day.has-events {
+    border-color: rgba(85, 196, 216, 0.4);
+}
+
+.calendar-event {
+    margin-top: 5px;
+    padding: 5px 6px;
+    border-left: 2px solid var(--color-accent);
+    border-radius: 4px;
+    background: rgba(85, 196, 216, 0.1);
+    color: var(--color-text-muted);
+    font-size: 0.72rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .calendar-container {
+        padding: 35px 0 50px;
+    }
+
+    .calendar-header {
+        min-height: 220px;
+        padding: 30px;
+    }
+
+    .calendar-section {
+        padding: 20px 12px;
+    }
+
+    .calendar-navigation h2 {
+        font-size: 1.2rem;
+    }
+
+    .calendar-nav-link {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-header {
+        padding: 25px 20px;
+    }
+
+    .calendar-navigation {
+        gap: 8px;
+    }
+
+    .calendar-navigation h2 {
+        font-size: 1rem;
+    }
+
+    .calendar-nav-link {
+        padding: 7px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+
+/* Calendar Day Detail */
+
+.calendar-day-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 50px 0 70px;
+}
+
+/* Page Header */
+
+.calendar-day-header {
+    display: flex;
+    align-items: center;
+    min-height: 240px;
+    padding: 45px;
+    margin-bottom: 45px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background:
+        linear-gradient(90deg, rgba(8, 15, 32, 0.96), rgba(16, 28, 53, 0.72)),
+        url("../img/astronomy-bg.jpg") center/cover;
+}
+
+.calendar-day-header-content {
+    max-width: 750px;
+}
+
+.calendar-day-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.calendar-day-header h1 {
+    margin-bottom: 15px;
+    color: var(--color-text);
+    font-size: clamp(2rem, 4vw, 3rem);
+    overflow-wrap: anywhere;
+}
+
+.calendar-day-header p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Events Section */
+
+.calendar-day-section {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--color-surface);
+}
+
+.calendar-day-heading {
+    margin-bottom: 30px;
+}
+
+.calendar-day-heading h2 {
+    margin-bottom: 10px;
+    color: var(--color-text);
+    font-size: 1.6rem;
+}
+
+.calendar-day-heading p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.calendar-day-events {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Event Card */
+
+.calendar-day-card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    background: var(--color-card);
+    transition: var(--transition-default);
+}
+
+.calendar-day-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.calendar-day-event-label {
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.calendar-day-card-header h2 {
+    margin: 12px 0 22px;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+/* Event Information */
+
+.calendar-day-card-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.calendar-day-info-item {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    background: var(--color-surface);
+}
+
+.calendar-day-info-item h3 {
+    margin-bottom: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.calendar-day-info-item p {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Observation Plan Link */
+
+.calendar-day-card-action {
+    margin-top: 22px;
+}
+
+.calendar-day-card-action a {
+    display: inline-block;
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition-default);
+}
+
+.calendar-day-card-action a:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Empty State */
+
+.calendar-day-empty {
+    padding: 45px 20px;
+    border: 1px dashed var(--color-border);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.calendar-day-empty h2 {
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.calendar-day-empty p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .calendar-day-events {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .calendar-day-container {
+        padding: 35px 0 50px;
+    }
+
+    .calendar-day-header {
+        min-height: 210px;
+        padding: 28px 22px;
+    }
+
+    .calendar-day-section {
+        padding: 22px 15px;
+    }
+
+    .calendar-day-card {
+        padding: 20px;
+    }
+
+    .calendar-day-card-info {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-day-card-header h2 {
+        font-size: 1.3rem;
+    }
 }

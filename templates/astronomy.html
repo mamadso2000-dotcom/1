@@ -2,6 +2,71 @@
 
 {% block content %}
 
-    <h1>Hello</h1>
+    <div class="astronomy-container">
+
+        <!-- Hero Section -->
+        <section class="astronomy-hero">
+            <div class="astronomy-hero-content">
+                <h1>Explore the Universe</h1>
+                <p>
+                    Discover celestial objects, explore astronomical data,
+                    and understand the universe through science and observation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Astronomy Sections -->
+        <section class="astronomy-sections">
+
+            <div class="astronomy-section-heading">
+                <h2>Explore Astronomy</h2>
+                <p>
+                    Explore the different areas of astronomy and discover
+                    the tools and information available at World Data.
+                </p>
+            </div>
+
+            <div class="astronomy-grid">
+
+                <!-- Celestial Objects -->
+                <article class="astronomy-card">
+                    <div class="astronomy-card-content">
+                        <h3>Celestial Objects</h3>
+                        <p>
+                            Discover planets and other celestial objects
+                            through astronomical data and scientific information.
+                        </p>
+                        <a href="{% url 'gallery' %}">Explore Objects</a>
+                    </div>
+                </article>
+
+                <!-- 3D Universe -->
+                <article class="astronomy-card">
+                    <div class="astronomy-card-content">
+                        <h3>3D Universe</h3>
+                        <p>
+                            Explore the structure and scale of the universe
+                            through three-dimensional astronomical models.
+                        </p>
+                        <span class="astronomy-coming-soon">Coming Soon</span>
+                    </div>
+                </article>
+
+                <!-- Astronomical Calendar -->
+                <article class="astronomy-card">
+                    <div class="astronomy-card-content">
+                        <h3>Astronomical Calendar</h3>
+                        <p>
+                            Discover astronomical events and explore
+                            their dates through the astronomical calendar.
+                        </p>
+                        <a href="{% url 'calendar' %}">Explore Calendar</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
 
 {% endblock content %}

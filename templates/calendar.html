@@ -2,46 +2,110 @@
 
 {% block content %}
 
-<hr>
-<div class="calendar container">
-    <ul class="inline-ul">
-        <li><h3><a href="{% url 'calendar_month' previous_year previous_month %}">previous</a></h3></li>
-        <li class="calendar-li-h2"><h2>{{ month }} / {{ year }}</h2></li>
-        <li><h3><a href="{% url 'calendar_month' next_year next_month %}">next</a></h3></li>
-    </ul>
+    <div class="calendar-container">
 
-    <table>
-        <thead>
-            <th>monday</th>
-            <th>tuesday</th>
-            <th>wednesday</th>
-            <th>thursday</th>
-            <th>friday</th>
-            <th>saturday</th>
-            <th>sunday</th>
-        </thead>
+        <!-- Calendar Header -->
+        <section class="calendar-header">
 
-        <tbody>
-            {% for week in calendar_weeks %}
-                <tr>
-                    {% for day_data in week %}
-                        {% if day_data == None %}
-                            <td></td>
-                        {% else %}
-                            <td>
-                                <a href="{% url 'calendar_day' year month day_data.day %}">
-                                    {{ day_data.day }}
-                                    {% for event in day_data.events %}
-                                        {{ event.planet_A.name }} - {{ event.planet_B.name }}
-                                    {% endfor %}
-                                </a>
-                            </td>
-                        {% endif %}
-                    {% endfor %}
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+            <div class="calendar-header-content">
+                <span class="calendar-label">ASTRONOMICAL CALENDAR</span>
+                <h1>Astronomical Events</h1>
+                <p>
+                    Explore astronomical events and discover
+                    planetary phenomena throughout the year.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Monthly Calendar -->
+        <section class="calendar-section">
+
+            <div class="calendar-navigation">
+
+                <a href="{% url 'calendar_month' previous_year previous_month %}"
+                class="calendar-nav-link">
+                    &larr; Previous
+                </a>
+
+                <h2>{{ month }} / {{ year }}</h2>
+
+                <a href="{% url 'calendar_month' next_year next_month %}"
+                class="calendar-nav-link">
+                    Next &rarr;
+                </a>
+
+            </div>
+
+            <div class="calendar-table-wrapper">
+
+                <table class="calendar-table">
+
+                    <thead>
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        {% for week in calendar_weeks %}
+
+                            <tr>
+
+                                {% for day_data in week %}
+
+                                    {% if day_data == None %}
+
+                                        <td class="calendar-empty-day"></td>
+
+                                    {% else %}
+
+                                        <td class="calendar-day {% if day_data.events %}has-events{% endif %}">
+
+                                            <a href="{% url 'calendar_day' year month day_data.day %}"
+                                            class="calendar-day-link">
+
+                                                <span class="calendar-day-number">
+                                                    {{ day_data.day }}
+                                                </span>
+
+                                                {% for event in day_data.events %}
+
+                                                    <div class="calendar-event">
+                                                        {{ event.planet_A.name }}
+                                                        -
+                                                        {{ event.planet_B.name }}
+                                                    </div>
+
+                                                {% endfor %}
+
+                                            </a>
+
+                                        </td>
+
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
 
 {% endblock content %}

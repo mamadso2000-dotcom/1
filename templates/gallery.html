@@ -2,26 +2,66 @@
 
 {% block content %}
 
-    <hr>
+    <div class="gallery-container">
 
-    <div class="container">
-        <ul class="inline-ul">
+        <!-- Gallery Header -->
+        <section class="gallery-header">
+            <h1>Celestial Objects</h1>
+            <p>
+                Explore the planets of our Solar System and discover
+                their physical characteristics and orbital properties.
+            </p>
+        </section>
+
+        <!-- Planet Gallery -->
+        <section class="planet-gallery">
 
             {% for planet in planet_list %}
 
-                <div class="planet-item">
+                <article class="planet-card">
 
-                    <a href="{% url 'planet_detail' planet.pk %}">
-                        <img src="{{ planet.image.url }}" class="planet-image" alt="{{ planet.name }}_image">
+                    <a href="{% url 'planet_detail' planet.pk %}"
+                    class="planet-card-link">
 
-                        <h2>{{ planet.name }}</h2>
+                        <div class="planet-image">
+                            <img src="{{ planet.image.url }}"
+                                alt="{{ planet.name }}">
+                        </div>
+
+                        <div class="planet-card-content">
+                            <h2>{{ planet.name }}</h2>
+
+                            <div class="planet-card-info">
+                                <p>
+                                    <span>Diameter</span>
+                                    <strong>{{ planet.diameter }} km</strong>
+                                </p>
+
+                                <p>
+                                    <span>Moons</span>
+                                    <strong>{{ planet.moons }}</strong>
+                                </p>
+                            </div>
+
+                            <span class="planet-card-action">
+                                Explore Planet
+                            </span>
+                        </div>
+
                     </a>
 
-                </div>
+                </article>
+
+            {% empty %}
+
+                <p class="gallery-empty">
+                    No celestial objects are currently available.
+                </p>
 
             {% endfor %}
 
-        </ul>
+        </section>
+
     </div>
 
 {% endblock content %}

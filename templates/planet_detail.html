@@ -1,38 +1,103 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
-    <hr>
-    <div class="planet-detail container">
-        <h1>{{ planet.name }}</h1>
-        <img src="{{ planet.image.url }}" alt="{{ planet.name }}_image">
-        <br><br><br><br><hr><br><br>
-        <ul>
-            {% if planet.pk == 1 %}
-                <li><big class="bold-paragraph">{{ planet.pk }}st Planet</big></li>
-            {% elif planet.pk == 2 %}
-                <li><big class="bold-paragraph">{{ planet.pk }}nd Planet</big></li>
-            {% elif planet.pk == 3 %}
-                <li><big class="bold-paragraph">{{ planet.pk }}rd Planet</big></li>
-            {% else %}
-                <li><big class="bold-paragraph">{{ planet.pk }}th Planet</big></li>
-            {% endif %}
-            <br>
-            <li><big class="bold-paragraph">Diameter : {{ planet.diameter }}</big></li><br>
-            <li><big class="bold-paragraph">Composition : {{ planet.composition }}</big></li><br>
-            <li><big class="bold-paragraph">Moons : {{ planet.moons}}</big></li><br>
-            <li><big class="bold-paragraph">Orbital data :</big><br>
-                <br>
-                <ul style="font-size: 1.15rem;">
-                    <li>Semi major axis : {{ planet.semi_major_axis }} AU</li><br>
-                    <li>Eccentricity : {{ planet.eccentricity }}</li><br>
-                    <li>Inclination : {{ planet.inclination }} </li><br>
-                    <li>Longitude of ascending node : {{ planet.longitude_of_ascending_node }}</li><br>
-                    <li>Argument of periapsis : {{ planet.argument_of_periapsis }}</li><br>
-                    <li>Mean anomaly : {{ planet.mean_anomaly }}</li><br>
-                    <li>Epoch : {{ planet.epoch }}</li>
-                </ul>
-            </li>
-        </ul>
+    <div class="planet-detail-container">
+
+        <!-- Planet Overview -->
+        <section class="planet-overview">
+
+            <div class="planet-overview-image">
+                <img src="{{ planet.image.url }}" alt="{{ planet.name }}">
+            </div>
+
+            <div class="planet-overview-content">
+                <span class="planet-detail-label">SOLAR SYSTEM</span>
+                <h1>{{ planet.name }}</h1>
+                <p>
+                    Explore the physical and orbital characteristics
+                    of {{ planet.name }}.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Physical Characteristics -->
+        <section class="planet-detail-section">
+
+            <div class="planet-detail-heading">
+                <h2>Physical Characteristics</h2>
+            </div>
+
+            <div class="planet-detail-grid">
+
+                <div class="planet-detail-card">
+                    <h3>Diameter</h3>
+                    <p>{{ planet.diameter }} km</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Composition</h3>
+                    <p>{{ planet.composition }}</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Moons</h3>
+                    <p>{{ planet.moons }}</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Orbital Characteristics -->
+        <section class="planet-detail-section">
+
+            <div class="planet-detail-heading">
+                <h2>Orbital Characteristics</h2>
+            </div>
+
+            <div class="planet-detail-grid">
+
+                <div class="planet-detail-card">
+                    <h3>Semi-major Axis</h3>
+                    <p>{{ planet.semi_major_axis }} AU</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Eccentricity</h3>
+                    <p>{{ planet.eccentricity }}</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Inclination</h3>
+                    <p>{{ planet.inclination }}°</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Longitude of Ascending Node</h3>
+                    <p>{{ planet.longitude_of_ascending_node }}°</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Argument of Periapsis</h3>
+                    <p>{{ planet.argument_of_periapsis }}°</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Mean Anomaly</h3>
+                    <p>{{ planet.mean_anomaly }}°</p>
+                </div>
+
+                <div class="planet-detail-card">
+                    <h3>Epoch</h3>
+                    <p>{{ planet.epoch }}</p>
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
 
 {% endblock content %}
