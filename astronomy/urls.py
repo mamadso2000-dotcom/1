@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import (GalleryView,
+from .views import (AstronomyView,
+                    GalleryView,
                     CalendarView,
                     PlansView,
                     Planet_Detail,
@@ -8,6 +9,7 @@ from .views import (GalleryView,
                     )
 
 urlpatterns = [
+    path('', AstronomyView.as_view(), name='astronomy'),
     path('gallery/', GalleryView.as_view(), name='gallery'),
     path("calendar/", CalendarView.as_view(), name="calendar"),
     path("calendar/<int:year>/<int:month>/", CalendarView.as_view(), name="calendar_month"),

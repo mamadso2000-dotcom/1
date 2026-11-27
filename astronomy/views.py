@@ -7,6 +7,10 @@ from django.shortcuts import redirect
 
 
 # mother views
+class AstronomyView(TemplateView):
+    template_name = 'astronomy.html'
+
+    
 class GalleryView(ListView):
     template_name = 'gallery.html'
     model = Planet
